@@ -1,18 +1,14 @@
 package main;
 
 import java.util.Scanner;
-
 import model.*;
-import thread.ConversionThread;
 import exception.InvalidTemperatureException;
 
 public class MainApp {
 
-    static String appName = "Temperature Converter";
-
     public static void main(String[] args) {
 
-        System.out.println("=== " + appName + " ===");
+        System.out.println("=== Temperature Converter ===");
 
         Scanner sc = new Scanner(System.in);
 
@@ -23,28 +19,22 @@ public class MainApp {
             System.out.print("Enter temperature type (C / F / K): ");
             String choice = sc.next().toUpperCase();
 
-            Temperature temp = null; // Dynamic Method Dispatch
-
             if (choice.equals("C")) {
-                temp = new Celsius(value);
+                double fahrenheit = (value * 9 / 5) + 32;
+                System.out.println("Celsius to Fahrenheit: " + fahrenheit);
             }
             else if (choice.equals("F")) {
-                temp = new Fahrenheit(value);
+                double celsius = (value - 32) * 5 / 9;
+                System.out.println("Fahrenheit to Celsius: " + celsius);
             }
             else if (choice.equals("K")) {
-                temp = new Kelvin(value);
+                double celsius = value - 273.15;
+                System.out.println("Kelvin to Celsius: " + celsius);
             }
             else {
                 System.out.println("Invalid choice!");
-                System.exit(0);
             }
 
-            // Run conversion in a separate thread
-            ConversionThread thread = new ConversionThread(temp);
-            thread.start();
-
-        } catch (InvalidTemperatureException e) {
-            System.out.println("Error: " + e.getMessage());
         } catch (Exception e) {
             System.out.println("Invalid input!");
         }

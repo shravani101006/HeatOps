@@ -7,9 +7,4 @@ public class Fahrenheit extends Temperature {
     public Fahrenheit(double value) throws InvalidTemperatureException {
         super(value);
     }
-
-    @Override
-    public String getUnit() {
-        return "Fahrenheit";
-    }
 }

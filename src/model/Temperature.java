@@ -14,11 +14,9 @@ public abstract class Temperature {
         this.value = value;
     }
 
-    // Abstract method
-    public abstract String getUnit();
-
     // Concrete method
     public double getValue() {
         return value;
     }
 }
+

@@ -77,3 +77,4 @@ public class TemperatureConverterGUI extends JFrame {
         SwingUtilities.invokeLater(() -> new TemperatureConverterGUI());
     }
 }
+
