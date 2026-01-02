@@ -1,4 +1,4 @@
-package com.tempconverter.exception;
+package exception;
 
 public class InvalidTemperatureException extends Exception {
 

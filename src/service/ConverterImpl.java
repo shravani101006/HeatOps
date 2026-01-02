@@ -1,6 +1,6 @@
-package com.tempconverter.service;
+package service;
 
-import com.tempconverter.model.*;
+import model.*;
 
 public class ConverterImpl implements Converter {
 

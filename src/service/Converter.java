@@ -1,4 +1,4 @@
-package com.tempconverter.service;
+package service;
 
 public interface Converter {
 

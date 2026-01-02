@@ -1,6 +1,6 @@
-package com.tempconverter.model;
+package model;
 
-import com.tempconverter.exception.InvalidTemperatureException;
+import exception.InvalidTemperatureException;
 
 public class Fahrenheit extends Temperature {
 

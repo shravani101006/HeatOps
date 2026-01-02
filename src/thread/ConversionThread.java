@@ -1,7 +1,7 @@
-package com.tempconverter.thread;
+package thread;
 
-import com.tempconverter.model.*;
-import com.tempconverter.service.ConverterImpl;
+import model.*;
+import service.ConverterImpl;
 
 public class ConversionThread extends Thread {
 

@@ -1,10 +1,10 @@
-package com.tempconverter.main;
+package main;
 
 import java.util.Scanner;
 
-import com.tempconverter.model.*;
-import com.tempconverter.thread.ConversionThread;
-import com.tempconverter.exception.InvalidTemperatureException;
+import model.*;
+import thread.ConversionThread;
+import exception.InvalidTemperatureException;
 
 public class MainApp {
 
